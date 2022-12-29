@@ -93,6 +93,15 @@ class RecyclerAdapter(context: Context, private val dbHelper: SQLiteDatabaseHelp
             }
         }
     }
+
+    fun removeWorkout(workout: Workout) {
+        CoroutineScope(Dispatchers.IO).launch {
+            dbHelper.removeWorkout(workout)
+            withContext(Dispatchers.Main) {
+                refreshDataset()
+            }
+        }
+    }
 }
 
 

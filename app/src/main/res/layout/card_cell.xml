@@ -17,22 +17,25 @@
         android:foreground="#00000000"
         >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/workout_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="5dp"
                 android:text="placeholder"
                 android:textColor="@color/black"
                 android:textSize="29sp"
-                android:textStyle="bold">
-
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_toStartOf="@id/arrow_image"
+                >
             </TextView>
 
             <TextView
@@ -42,12 +45,14 @@
                 android:text="placeholder rep text"
                 android:textSize="25sp"
                 android:textColor="#666666"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/workout_name"
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="5dp"
-                android:layout_below="@+id/workout_name"
                 android:translationY="-5dp"
+                android:singleLine="true"
+                android:layout_toStartOf="@id/arrow_image"
                 >
-
             </TextView>
 
             <TextView
@@ -57,17 +62,78 @@
                 android:text="placeholder rep text"
                 android:textSize="25sp"
                 android:textColor="#666666"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rep_amt"
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="5dp"
-                android:layout_below="@+id/rep_amt"
                 android:translationY="-10dp"
+                android:singleLine="true"
+                android:layout_toStartOf="@id/arrow_image"
                 >
-
             </TextView>
 
+            <ImageView
+                android:id="@+id/arrow_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/open"
+                android:scaleY="0.4"
+                android:scaleX="0.4"
+                android:elevation="4dp"
+                android:translationZ="4dp"/>
+
+        </RelativeLayout>
 
 
-        </LinearLayout>
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            >-->
+<!--&lt;!&ndash;            <View&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/line"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="1dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="#CFCFCF"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginLeft="305dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentRight="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentTop="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginRight="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                />&ndash;&gt;-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="47dp"-->
+<!--                android:src="@drawable/open"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginRight="14dp"-->
+<!--                />-->
+
+<!--        </RelativeLayout>-->
+
+
+
+
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="#CFCFCF"-->
+<!--            android:layout_marginLeft="305dp"-->
+<!--            />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="31dp"-->
+<!--            android:layout_height="39dp"-->
+<!--            android:layout_marginLeft="340dp"-->
+<!--            android:src="@drawable/open"-->
+<!--            android:layout_marginTop="40dp">-->
+
+<!--        </ImageView>-->
 
     </androidx.cardview.widget.CardView>
 

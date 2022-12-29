@@ -42,6 +42,22 @@ class Edit_Workout : AppCompatActivity() {
         button.setOnClickListener {
             buttonClicked()
         }
+
+        val removeButton = findViewById<Button>(R.id.remove_workout_btn)
+        removeButton.setBackgroundColor(Color.parseColor("#ffdb1818"))
+
+        removeButton.setOnClickListener {
+            removeButtonClicked()
+        }
+
+    }
+
+    fun removeButtonClicked() {
+        var thisWorkout: Workout? = intent.getSerializableExtra("KEY_WORKOUT") as? Workout
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("KEY_REMOVE_WORKOUT", thisWorkout)
+        startActivity(intent)
+        overridePendingTransition(R.anim.sl, R.anim.sr)
     }
 
     fun buttonClicked() {

@@ -38,11 +38,19 @@ class MainActivity : AppCompatActivity() {
         val fab = findViewById<FloatingActionButton>(R.id.fab)
 
         // Change color of FAB
-        fab.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ffdb1818")))
+        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#ffdb1818"))
 
         // Start FAB listener
         fab.setOnClickListener {
             startNewActivity()
+        }
+
+        // Retrieve workout to be removed passed in intent, if any
+        var removeWorkout: Workout? = intent.getSerializableExtra("KEY_REMOVE_WORKOUT") as? Workout
+
+        // Remove workout from database, if it exists
+        if (removeWorkout != null) {
+            adapter.removeWorkout(removeWorkout)
         }
 
         // Retrieve workout passed in intent, if any

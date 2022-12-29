@@ -97,4 +97,9 @@ class SQLiteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABAS
         cursor.close()
         return workouts
     }
+
+    fun removeWorkout(workout: Workout) {
+        val db = this.writableDatabase
+        db.delete(TABLE_WORKOUTS, "$KEY_NAME = ?", arrayOf(workout.name))
+    }
 }

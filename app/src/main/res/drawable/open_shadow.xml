@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item android:left="-4dp">
+    <shape android:shape="rectangle">
+      <solid android:color="#000000" />
+      <corners android:radius="4dp" />
+    </shape>
+  </item>
+
+  <item>
+    <vector
+        android:src="@drawable/open"
+        android:gravity="center" />
+  </item>
+
+</layer-list>

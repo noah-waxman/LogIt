@@ -30,11 +30,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_workout_text"></ImageView>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="56dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -74,12 +75,54 @@
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <ImageView
+            android:id="@+id/weight"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/weight_svgrepo_com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </ImageView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weight_amt_field"
+            android:layout_width="262dp"
+            android:layout_height="57dp"
+            android:hint="Weight"
+            app:boxBackgroundColor="@color/status_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/weight"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/weight_text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -119,59 +162,27 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_marginTop="48dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
-        <ImageView
-            android:id="@+id/weight"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/weight_svgrepo_com"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
-
-        </ImageView>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/weight_amt_field"
-            android:layout_width="262dp"
-            android:layout_height="57dp"
-            android:hint="Weight"
-            app:boxBackgroundColor="@color/status_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/weight"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/weight_text_edit"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text"
-                android:maxLines="1" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <Button
         android:id="@+id/add_workout_btn_edit"
         android:layout_width="279dp"
         android:layout_height="82dp"
-        android:text="Add Exercise"
+        android:layout_marginTop="48dp"
+        android:text="Edit Exercise"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+    <Button
+        android:id="@+id/remove_workout_btn"
+        android:layout_width="279dp"
+        android:layout_height="82dp"
+        android:text="Remove Exercise"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-        app:layout_constraintVertical_bias="0.439" />
+        app:layout_constraintTop_toBottomOf="@+id/add_workout_btn_edit"
+        app:layout_constraintVertical_bias="0.26" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
